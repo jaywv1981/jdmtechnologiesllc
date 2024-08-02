@@ -3,41 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JDM Technologies - Windows Utility Software</title>
+    <title>JDM Technologies - PDF Combiner</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             background-color: #f4f4f4;
         }
-        header {
-            background-color: #35424a;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        main {
-            padding: 2rem;
-            max-width: 800px;
-            margin: auto;
+        h1 {
+            color: #333;
         }
         .product {
-            background-color: white;
+            background: #fff;
             border-radius: 5px;
-            padding: 1rem;
-            margin-bottom: 1rem;
+            padding: 20px;
+            margin-bottom: 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .button {
+        .download-btn {
             display: inline-block;
+            background: #007bff;
+            color: #fff;
             padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
             text-decoration: none;
             border-radius: 5px;
-            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .download-btn:hover {
+            background: #0056b3;
         }
     </style>
 </head>
@@ -46,39 +41,13 @@
         <h1>JDM Technologies</h1>
         <p>Windows Utility Software Solutions</p>
     </header>
-    
+
     <main>
         <div class="product">
             <h2>PDF Combiner</h2>
             <p>Easily merge multiple PDF files into a single document.</p>
-            <button class="button" onclick="downloadTrial('pdf-combiner')">Download Trial</button>
-        </div>
-        
-        <div class="product">
-            <h2>Media File Converter</h2>
-            <p>Convert various media files between different formats with ease.</p>
-            <button class="button" onclick="downloadTrial('media-converter')">Download Trial</button>
+            <a href="https://drive.google.com/file/d/11ZmltOQv9P90y8ibnng0eFziVJXKYjWm/view?usp=sharing" class="download-btn" target="_blank">Download Trial</a>
         </div>
     </main>
-
-    <script>
-        function downloadTrial(productId) {
-            let downloadUrl;
-            switch(productId) {
-                case 'pdf-combiner':
-                    downloadUrl = 'https://jdmtech-software-downloads.s3.amazonaws.com/pdfcombine.exe';
-                    break;
-                case 'media-converter':
-                    // Replace with actual URL when you upload this file
-                    downloadUrl = 'https://jdmtech-software-downloads.s3.amazonaws.com/mediaconverter.exe';
-                    break;
-                default:
-                    alert('Product not found');
-                    return;
-            }
-            
-            window.location.href = downloadUrl;
-        }
-    </script>
 </body>
 </html>
